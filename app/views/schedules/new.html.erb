@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="form-container">
+  <%= form_with model: @schedule do |f| %>
+  <table class="table table-hover">
+    <tr>
+      <h3>予定追加</h3>
+      <p><font color="red">*</font>は必須項目です。</p>
+      <%= render "shared/error", obj: @schedule %>
+    </tr>
+
+    <tr>
+      <th><%= f.label :title, "タイトル" %><font color="red">*</font></th>
+      <td><%= f.text_field :title, maxlengh: "20" %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :startdate, "開始日" %><font color="red">*</font></th>
+      <td><%= f.date_field :startdate %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :enddate, "終了日" %><font color="red">*</font></th>
+      <td><%= f.date_field :enddate %></td>
+    </tr>
+
+    <tr>
+      <td><%= f.check_box :all_day %></td>
+      <th><%= f.label :all_day, "終日の場合はチェック" %></th>
+    </tr>
+
+    <tr>
+      <th><%= f.label :memo, "メモ" %></th>
+      <td><%= f.text_area :memo, maxlengh: "500" %></td>
+    </tr>
+  </table>
+
+    <div>
+      <ul>
+        <li><%= link_to "キャンセル", :schedules, class: 'btn btn-outline-danger rounded-0' %></li>
+        <li><%= f.submit "保存", class: 'btn btn-outline-dark rounded-0' %></li>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>

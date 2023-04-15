@@ -1,0 +1,54 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+header {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-bottom: 7px solid black;
+  text-align: center;
+}
+
+footer{
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 7px solid black;
+}
+
+.notice {
+  background-color: lightgray;
+  padding: 5px;
+}
+
+.PageTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 780px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  color: lightslategray;
+}
+
+.form-container {
+  max-width: 780px;
+  display: flex;
+  color: lightslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  width: 780px;
+  text-align: center;
+}
